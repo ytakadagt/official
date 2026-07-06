@@ -27,41 +27,35 @@ html{
 }
 
 body{
-
     background:#111;
     color:#fff;
     font-family:"Inter",sans-serif;
-
 }
 
 /* ---------- HERO ---------- */
 
 .hero{
-
     position:relative;
     width:100%;
     height:100vh;
     overflow:hidden;
-
 }
 
 .hero img{
-
     width:100%;
     height:100%;
     object-fit:cover;
-    animation:zoom 20s linear forwards;
-
+    animation:zoom 18s ease forwards;
 }
 
 .hero::after{
-
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.25);
-
+    background:rgba(0,0,0,.22);
 }
+
+/* ---------- TITLE ---------- */
 
 .title{
 
@@ -70,38 +64,63 @@ body{
     top:50%;
     left:50%;
 
-    transform:translate(-50%,-50%);
+    transform:translate(-50%,-55%);
 
     z-index:2;
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(54px,9vw,120px);
-
-    letter-spacing:.04em;
-
-    text-align:center;
+    font-size:clamp(64px,9vw,140px);
 
     font-weight:400;
 
+    letter-spacing:.03em;
+
+    text-align:center;
+
 }
+
+/* ---------- SAVE THE DATE ---------- */
 
 .date{
 
     position:absolute;
 
-    bottom:40px;
     left:50%;
+
+    bottom:60px;
 
     transform:translateX(-50%);
 
     z-index:2;
 
-    font-size:13px;
-
-    letter-spacing:.35em;
+    text-align:center;
 
     text-transform:uppercase;
+
+    color:white;
+
+}
+
+.date .save{
+
+    font-size:14px;
+
+    letter-spacing:.45em;
+
+    opacity:.8;
+
+}
+
+.date .day{
+
+    margin-top:10px;
+
+    font-size:26px;
+
+    letter-spacing:.28em;
+
+    font-family:"Cormorant Garamond",serif;
 
 }
 
@@ -109,7 +128,7 @@ body{
 
 .content{
 
-    max-width:760px;
+    max-width:720px;
 
     margin:120px auto;
 
@@ -117,7 +136,7 @@ body{
 
 }
 
-.section-title{
+h2{
 
     font-size:12px;
 
@@ -125,9 +144,11 @@ body{
 
     text-transform:uppercase;
 
-    margin-bottom:35px;
+    margin-bottom:30px;
 
     color:#bdbdbd;
+
+    font-weight:400;
 
 }
 
@@ -137,33 +158,33 @@ body{
 
     line-height:2.2;
 
-    color:#e0e0e0;
+    color:#e5e5e5;
 
-    margin-bottom:80px;
+    margin-bottom:70px;
 
 }
 
 .contact{
 
-    margin-bottom:80px;
+    margin-bottom:60px;
 
 }
 
-.contact a{
+.contact a,
+.social a{
 
     color:white;
 
     text-decoration:none;
 
-    border-bottom:1px solid rgba(255,255,255,.3);
-
     transition:.3s;
 
 }
 
-.contact a:hover{
+.contact a:hover,
+.social a:hover{
 
-    border-color:white;
+    opacity:.6;
 
 }
 
@@ -177,33 +198,11 @@ body{
 
 }
 
-.social a{
-
-    color:white;
-
-    text-decoration:none;
-
-    letter-spacing:.18em;
-
-    text-transform:uppercase;
-
-    font-size:13px;
-
-    transition:.3s;
-
-}
-
-.social a:hover{
-
-    opacity:.6;
-
-}
-
 footer{
 
     text-align:center;
 
-    padding:60px 20px;
+    padding:60px;
 
     color:#777;
 
@@ -211,18 +210,16 @@ footer{
 
 }
 
+/* ---------- ANIMATION ---------- */
+
 @keyframes zoom{
 
     from{
-
         transform:scale(1.05);
-
     }
 
     to{
-
         transform:scale(1);
-
     }
 
 }
@@ -231,7 +228,19 @@ footer{
 
 .title{
 
-    font-size:56px;
+    font-size:58px;
+
+}
+
+.date .save{
+
+    font-size:11px;
+
+}
+
+.date .day{
+
+    font-size:22px;
 
 }
 
@@ -266,16 +275,22 @@ Yoichi Takada
 </div>
 
 <div class="date">
-SAVE THE DATE — AUGUST 20
+
+<div class="save">
+SAVE THE DATE
+</div>
+
+<div class="day">
+AUGUST 20
+</div>
+
 </div>
 
 </section>
 
 <section class="content">
 
-<div class="section-title">
-PROFILE
-</div>
+<h2>PROFILE</h2>
 
 <div class="bio">
 
@@ -287,9 +302,7 @@ PROFILE
 
 </div>
 
-<div class="section-title">
-CONTACT
-</div>
+<h2>CONTACT</h2>
 
 <div class="contact">
 
@@ -299,18 +312,16 @@ ytakadagt@gmail.com
 
 </div>
 
-<div class="section-title">
-SOCIAL
-</div>
+<h2>SOCIAL</h2>
 
 <div class="social">
 
 <a href="https://x.com/takada_yoichi" target="_blank">
-X / @takada_yoichi
+X
 </a>
 
 <a href="https://www.instagram.com/yoichitakada_?igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank">
-Instagram / @yoichitakada_
+Instagram
 </a>
 
 </div>
@@ -325,4 +336,3 @@ Instagram / @yoichitakada_
 
 </body>
 </html>
-```
